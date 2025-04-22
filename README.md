@@ -126,7 +126,3 @@ If you encounter issues:
 4. Check network requests in the browser's developer tools
 5. Verify proper API URLs in the frontend configuration
 6. Run the test-connection.js script for diagnostics
-
-## License
-
-MIT 
