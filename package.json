@@ -1,0 +1,14 @@
+{
+  "name": "jobquest",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "./start-jobquest.bat",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

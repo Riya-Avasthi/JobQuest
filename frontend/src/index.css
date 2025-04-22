@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 39 67% 95%;  /* Cream background - lighter #f7ecda */
+    --foreground: 178 66% 23%; /* Teal foreground - #1a7e79 */
+    --card: 39 67% 95%;        /* Cream card bg */
+    --card-foreground: 178 66% 23%;
+    --popover: 39 67% 95%;
+    --popover-foreground: 178 66% 23%;
+    --primary: 178 66% 30%;   /* Teal primary */
+    --primary-foreground: 39 67% 95%;
+    --secondary: 178 66% 90%; /* Light teal secondary */
+    --secondary-foreground: 178 66% 23%;
+    --muted: 39 30% 90%;      /* Muted cream */
+    --muted-foreground: 178 30% 30%;
+    --accent: 178 66% 95%;    /* Light teal accent */
+    --accent-foreground: 178 66% 23%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 39 67% 95%;
+    --border: 178 30% 85%;
+    --input: 178 30% 85%;
+    --ring: 178 66% 30%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 178 66% 15%;  /* Dark teal background */
+    --foreground: 39 67% 95%;   /* Cream foreground */
+    --card: 178 66% 15%;
+    --card-foreground: 39 67% 95%;
+    --popover: 178 66% 15%;
+    --popover-foreground: 39 67% 95%;
+    --primary: 39 67% 95%;     /* Cream primary */
+    --primary-foreground: 178 66% 23%;
+    --secondary: 178 25% 25%;   /* Dark teal secondary */
+    --secondary-foreground: 39 67% 95%;
+    --muted: 178 25% 25%;
+    --muted-foreground: 178 15% 75%;
+    --accent: 178 25% 25%;
+    --accent-foreground: 39 67% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 39 67% 95%;
+    --border: 178 25% 25%;
+    --input: 178 25% 25%;
+    --ring: 39 67% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-cream text-teal;
+  }
+}
+
+/* Custom utility classes for our theme */
+@layer utilities {
+  .btn-teal {
+    @apply bg-teal text-cream hover:bg-teal-light transition duration-200;
+  }
+  
+  .btn-outline {
+    @apply border border-teal text-teal hover:bg-teal hover:text-cream transition duration-200;
+  }
+  
+  .section-cream {
+    @apply bg-cream text-teal py-8;
+  }
+  
+  .section-teal {
+    @apply bg-teal text-cream py-8;
+  }
+}
+
+/* Auth form styles */
+@layer components {
+  .auth-container {
+    @apply min-h-screen flex items-center justify-center bg-cream-light py-12 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .auth-form-container {
+    @apply max-w-md w-full space-y-8 bg-white p-10 rounded-lg shadow-md border border-teal/10;
+  }
+  
+  .auth-heading {
+    @apply mt-2 text-center text-3xl font-bold text-teal;
+  }
+  
+  .auth-subheading {
+    @apply mt-2 text-center text-sm text-teal-dark;
+  }
+  
+  .auth-input {
+    @apply appearance-none relative block w-full px-3 py-2 border border-teal/20 rounded-md placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal focus:z-10 sm:text-sm;
+  }
+  
+  .auth-button {
+    @apply relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-teal hover:bg-teal-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal transition-colors;
+  }
+  
+  .auth-link {
+    @apply font-medium text-teal hover:text-teal-dark hover:underline transition-colors;
+  }
+}
